@@ -1,0 +1,84 @@
+{
+  "db": {
+    "username": "postgres",
+    "password": "Dev!#tTags$!Xq01&",
+    "database": "pharma_e_belling",
+    "host": "development.cdvwie5x3rwt.ap-south-1.rds.amazonaws.com",
+    "dialect": "postgres",
+    "systemConfig": {
+      "defaultPassword": "@gsp"
+    }
+  },
+  "storage": {
+    "id": "AKIAVTH5FQQLU54QLXPT",
+    "key": "WDU4d0XyaUgnb8/+cpSolOKY9ZyToKu/IjpJIAQC",
+    "name": "lifestyle-dev-tt/EBilling",
+    "url": "https://lifestyle-dev-tt.s3.ap-south-1.amazonaws.com/"
+  },
+  "googleAPI": {
+    "key": "AIzaSyAx66_O5KtHzLI05WYw99duzKpT_5qP6nY"
+  },
+  "jwt": {
+    "mappingApp": {
+      "alg": "HS256",
+      "privateKey": "msMApp-A-uth "
+    },
+    "trustTrack": {
+      "alg": "HS256",
+      "privateKey": "tt-Enc-jWt-sct",
+      "expIn": "1d"
+    },
+    "syncServer": {
+      "privateKey": "tt-Local-jWt-sct",
+      "alg": "HS256",
+      "expIn": "10m"
+    },
+    "emaiVerification": {
+      "alg": "HS256",
+      "privateKey": "ms@EVDEV",
+      "expIn": "2d"
+    },
+    "resetPassword": {
+      "alg": "HS256",
+      "privateKey": "sf@Reset@paSS",
+      "expIn": "2h"
+    }
+  },
+  "mail": {
+    "host": "smtp.trusttags.in",
+    "port": 587,
+    "user": "support@trusttags.in",
+    "pass": "k@Wqdgn6A0",
+    "from": "TrustTags <support@trusttags.in>"
+  },
+  "qrCodeLimit": 348,
+  "codeUrl": "HTTPS://TT.TTAGS.IN/",
+  "clientUrl": "tt.reesource.net",
+  "erpConfig": {
+    "postTransferShipmentdata": "",
+    "postedInvoiceData": "",
+    "EnterpriseId": "",
+    "TenantId": "",
+    "APIKey": "",
+    "LoginUserId": "",
+    "Password": ""
+  },
+  "ttERPCredentials": {
+    "userName": "",
+    "password": ""
+  },
+  "razorPayCredentials": {
+    "key_id": "rzp_test_Is4TJaelqScVjU",
+    "key_secret": "TWrWxvqpWOg2OqcxS9VWjYY3"
+  },
+  "adjustmentEmail": [],
+  "isProductLocationBased": true,
+  "isEsignBased": false,
+  "otp": {
+    "sender": "VIVIDE",
+    "username": "9873699571",
+    "password": "Harshita@123",
+    "apiKey": "MzczODMzNDM3NzMxNTY0Yjc5NDY0NTZkMzA0MjU2Nzg",
+    "custom": "iil"
+  }
+}

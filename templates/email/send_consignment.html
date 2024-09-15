@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Hello <%data.receiver_name%>,
+<p>You have new consignment from <%data.sender_name%></p>
+<h3>Consignment Details</h3>
+<ul>
+    <li>Invoice Number: <%data.invoice_no%></li>
+    <li>Vehicle Number: <%data.vehicle_no%></li>
+    <li>Number of Shipper: <%data.approx_cases%></li>
+    <li>Grand Parent Qr Code: <%data.grand_parant_qrcode%></li>
+</ul>
+
+<h3>Invoice Qrcode </h3>
+<img src="<%data.grand_parant_code%>">
+</body>
+</html>

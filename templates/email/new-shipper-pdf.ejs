@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="HandheldFriendly" content="true">
+  <title>Willowood Chemicals Pvt. Ltd.</title>
+  <style>
+    body {
+      /* position: relative; */
+      width: 100% !important;
+      /*  height: 29.7cm;*/
+      margin: 0px !important;
+      color: black;
+      background: #FFFFFF;
+      font-family: Arial, sans-serif;
+      font-size: 7px;
+      font-family: SourceSansPro;
+    }
+
+    .no-break {
+      page-break-inside: avoid;
+    }
+
+    .small-font {
+      font-size: 7px;
+    }
+
+    .gsp-logo {
+      width: 30px !important;
+    }
+
+    .gsp-header {
+      width: 70px !important;
+    }
+
+    .main {
+      width: 50% !important;
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <main class="clearfix">
+    <div class="row" style="border:1px solid green;">
+      <% let mod = 10; %>
+      <% for(let i=0; i < value.length; i=i+2) { %>
+
+      <div class="col-3 row" style="border: 1px solid black;">
+        <div class="col-1">
+          <img src="<%= value[i].gspLogo %>" alt="" width="30px" height="30px"
+            style="margin-bottom: 5px !important;"></img>
+        </div>
+        <div class="col-2 small-font" style="border:1px solid red;">
+          <div class="pt-1"><b>Willowood Chemicals Pvt. Ltd.</b></div>
+          <div><b><%= value[i].unique_code %></b></div>
+        </div>
+      </div>
+
+
+
+      <!-- <tr>  
+  <td style="padding-bottom: 14px !important; padding-top: 3px;">
+    <% if((i == 10 && i % 10 == 0) || (i > 12 && (i % mod == 0))) { %>
+      <% } %>
+    <table> 
+	<tr class="no-break">
+	 <td rowspan="2">
+	    <img src="<%= value[i].gspLogo %>" alt="" width="30px" height="30px" style="margin-bottom: 5px !important;" ></img>
+	  </td>
+	  <td colspan="2"><b>GSP Crop Science Pvt. Ltd.</b></td>                  
+	 </tr><br/>
+	<tr><td><b><%= value[i].unique_code %></b><br><br></td></tr>
+	<tr>
+	  <td>SKU Name</td>
+	  <td  colspan="3"> : <%= value[i].product_name %></td>
+	</tr>
+	<tr>
+	  <td style="min-width:50px !important;">Batch No.</td>
+	  <td> : <%= value[i].batchNo%></td>
+	   <td rowspan="4"  style="padding-left: 10px !important;">
+	    <img src="<%= value[i].code_image %>" alt="" width="60px" height="60px" ></img>
+	  </td>
+
+	</tr>
+	<tr>
+	  <td >Mfg. Date</td>
+	  <td > : <%= value[i].mfgDate%></td>
+	</tr>
+	<tr>
+	  <td >Exp. Date</td>
+	  <td > : <%= value[i].expDate%></td>
+	</tr>    
+	<tr>
+	  <td  >Quantity</td>
+	  <td  > : <%= value[i].shipper_size %></td>
+	</tr>
+    </table>
+    <% if((i == 10 && i % 10 == 0) || (i > 12 && (i % mod == 0))) { %>
+            <% } %>
+          </td>
+          <% if((i+1) < value.length)  { %>
+          <td style="padding-left: 72px !important; padding-bottom: 14px !important; padding-top: 3px;">
+            <% if((i == 10 && i % 10 == 0) || (i > 12 && (i % mod == 0))) { %>
+            <% } %>
+            <table style="padding:0px; margin-left:9px;">
+              <tr class="no-break">
+                <td rowspan="2">
+                  <img src="<%= value[i].gspLogo %>" alt="" width="30px" height="30px" style="margin-bottom: 5px !important;" ></img>
+                </td>
+                <td colspan="2"><b>GSP Crop Science Pvt. Ltd.</b></td>                  
+                  </tr><br/>
+              <tr><td><b><%= value[i+1].unique_code %></b><br><br></td></tr>
+              <tr>
+                <td  >SKU Name</td>
+                <td colspan="3"> : <%= value[i+1].product_name %></td>
+              </tr>
+              <tr>
+                <td style="min-width: 50px;">Batch No.</td>
+                <td > : <%= value[i+1].batchNo%></td>
+		 <td rowspan="4"  style="padding-left: 10px !important;">
+                  <img src="<%= value[i+1].code_image %>" alt="" width="60px" height="60px" ></img>
+                </td> 
+              </tr>           
+              <tr>
+                <td >Mfg. Date</td>
+                <td > : <%= value[i+1].mfgDate%></td>
+              </tr>
+              <tr>
+                <td >Exp. Date</td>
+                <td > : <%= value[i+1].expDate%></td>
+              </tr>
+              <tr>
+                <td  >Quantity</td>
+                <td > : <%= value[i+1].shipper_size %></td>
+              </tr>
+            </table>
+            <% if((i == 10 && i % 10 == 0) || (i > 12 && (i % mod == 0))) { %>
+          <%  mod += 12; } %>
+          </td>
+          <% } %>            
+      </tr> -->
+      <% } %>
+    </div>
+  </main>
+</body>
+
+</html>
